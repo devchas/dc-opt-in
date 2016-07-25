@@ -6,4 +6,5 @@ module.exports = function(app) {
 	app.get('/success', function(req, res) { res.sendFile(path.join(__dirname, '/static/success.html')) });
 	app.post('/confirmEmail', ContactList.sendConfirmation);
 	app.post('/signup', ContactList.addUser);
+	app.get('/favicon.ico', function(req, res) { res.sendStatus(200) });
 }
